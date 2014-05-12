@@ -64,12 +64,3 @@ while($guess != $random_number) {
 
 fwrite(STDOUT, CORRECT . PHP_EOL);
 
-/*<?php
-
-$codeup = 'amazing';
-$i = 1;
-while ($codeup == ' amazing') {
-	echo "{$i} Codeup Rocks!\n";
-	$i++;
-
-} infinitie loop*/
