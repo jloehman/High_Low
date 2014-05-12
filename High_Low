@@ -35,8 +35,8 @@ Hints:
 
 //while
 
-define ('MIN', 1);
-define ('MAX', 100);
+define ('MIN', $argv[1]);
+define ('MAX', $argv[2]);
 define ('LOW_OUTPUT', 'HIGHER');
 define ('HIGHER_OUTPUT', 'LOWER');
 define ('CORRECT', 'GOOD GUESS');
