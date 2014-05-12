@@ -43,7 +43,7 @@ define ('CORRECT', 'GOOD GUESS');
 
 $random_number = rand(MIN, MAX);
 //fwrite(STDOUT, 'random number is ' . $random_number . PHP_EOL);
-
+$guess_count = 1;
 
 	fwrite(STDOUT, 'Guess a number between  ' .  MIN  .  ' and '  .  MAX  .   ' : ');
 $guess = (int)fgets(STDIN);
@@ -58,9 +58,13 @@ while($guess != $random_number) {
 	}
 		fwrite(STDOUT, 'Guess a number between  ' .  MIN  .  ' and '  .  MAX  .  '? ');
 	$guess = (int)fgets(STDIN);
+	$guess_count++;
 		//fwrite(STDOUT, 'Your Guess was ' . $guess . PHP_EOL);
 }
 
 
-fwrite(STDOUT, CORRECT . PHP_EOL);
+fwrite(STDOUT, CORRECT .  " It took you $guess_count tries."  . PHP_EOL);
 
+
+
+?>
