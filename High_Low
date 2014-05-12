@@ -41,7 +41,7 @@ define ('LOW_OUTPUT', 'HIGHER');
 define ('HIGHER_OUTPUT', 'LOWER');
 define ('CORRECT', 'GOOD GUESS');
 
-$random_number = rand(MIN, MAX);
+$random_number = mt_rand(MIN, MAX);
 //fwrite(STDOUT, 'random number is ' . $random_number . PHP_EOL);
 $guess_count = 1;
 
