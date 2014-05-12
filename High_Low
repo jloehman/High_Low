@@ -35,11 +35,24 @@ Hints:
 
 //while
 
+if (!is_numeric($argv[1]) || !is_numeric($argv[2])) {
+	echo "What are you doing?\n";
+	exit(1);
+}
+
+if ($argc == 3) {
+
 define ('MIN', $argv[1]);
 define ('MAX', $argv[2]);
+} else {
 define ('LOW_OUTPUT', 'HIGHER');
 define ('HIGHER_OUTPUT', 'LOWER');
 define ('CORRECT', 'GOOD GUESS');
+}
+if ($argc < 2) {
+	fwrite(STDERR, "Hey! I require two numbers!\n");
+	exit(1);
+} 
 
 $random_number = mt_rand(MIN, MAX);
 //fwrite(STDOUT, 'random number is ' . $random_number . PHP_EOL);
