@@ -1,1 +1,75 @@
 <?php
+
+/*High Low Game!
+
+Welcome to the world of game development!
+
+You are going to build a game using the CLI.
+
+The specs for the game are:
+- game picks a random number between 1 and 100.
+- prompts user to guess the number
+- if user's guess is less than the number, it outputs "HIGHER"
+- if user's guess is more than the number, it outputs "LOWER"
+- if a user guesses the number, the game should declare "GOOD GUESS!"
+
+Hints:
+- Using conditionals and loops here is important
+- Random numbers can be made with the internal rand() function
+- If user is right, tell them they won
+- While they are wrong, give them hints and keep asking
+- Use exit(0) to end the game
+- If you get stuck in game, ctrl-c will exit.*/
+
+//constants
+
+//variables
+
+//random
+
+//user input
+
+//elseif
+
+//if
+
+//while
+
+define ('MIN', 1);
+define ('MAX', 100);
+define ('LOW_OUTPUT', 'HIGHER');
+define ('HIGHER_OUTPUT', 'LOWER');
+define ('CORRECT', 'GOOD GUESS');
+
+$random_number = rand(MIN, MAX);
+//fwrite(STDOUT, 'random number is ' . $random_number . PHP_EOL);
+
+
+	fwrite(STDOUT, 'Guess a number between  ' .  MIN  .  ' and '  .  MAX  .   ' : ');
+$guess = (int)fgets(STDIN);
+	fwrite(STDOUT, 'Your Guess was ' . $guess . PHP_EOL);
+
+while($guess != $random_number) {
+	if ($guess < $random_number) {
+		fwrite(STDOUT, LOW_OUTPUT . PHP_EOL);
+	}
+	elseif($guess > $random_number) {
+		fwrite(STDOUT, HIGHER_OUTPUT . PHP_EOL);
+	}
+		fwrite(STDOUT, 'Guess a number between  ' .  MIN  .  ' and '  .  MAX  .  '? ');
+	$guess = (int)fgets(STDIN);
+		//fwrite(STDOUT, 'Your Guess was ' . $guess . PHP_EOL);
+}
+
+
+fwrite(STDOUT, CORRECT . PHP_EOL);
+
+/*<?php
+
+$codeup = 'amazing';
+$i = 1;
+while ($codeup == ' amazing') {
+	echo "{$i} Codeup Rocks!\n";
+	$i++;
+
+} infinitie loop*/
